@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+<style>
+h1{
+  text-align:center;
+}
+.infoBtn{
+  margin:auto;
+  display:block;
+  margin-top:5%;
+}
+footer.bottom{
+  margin-top:70vh;
+  padding-bottom:10vh;
+}
+
+footer{
+  background-color:black;
+  height:1vh;
+}
+header{
+  background-color:black;
+  height:1vh;
+  margin-bottom:5%;
+}
+.form-control{
+margin:auto;
+display:block;
+
+}
+.control{
+margin:auto;
+display:block;
+}
+label{
+color:white;
+font-size:6vw;
+}
+
+.form-group{
+  text-align:center;
+}
+
+body{
+margin-top:5%;
+background:#3496E1;
+margin-bottom:0;
+}
+    div {
+    margin: 5px;
+}
+    .container {
+        margin-left: 0%;
+   overflow: hidden;
+}
+
+.right {
+    width: 180px;
+    float: right;
+    margin-right:22%;
+}
+
+.left {
+    margin-left:
+        width:auto;
+    
+}
+.form-control{
+width:inherit;
+padding: 3vh 6vw;
+}
+
+    .logo{
+        width: 15%;
+        margin-left: 42%;
+    }
+    
+    h2{
+        text-align: center;
+    }
+
+</style>
+ 
+  </head>
+  <body>
+  
+  <h1>
+  BRUIN LOCKER
+  </h1>
+<header>
+  
+</header>
+
+<form id="genericForm">
+ 
+<div class="form-group">
+ 
+<form>
+ 
+ 
+  <div class="form-group">
+    <label for="Combo" class = "form-label">Locker Combination</label>
+    <input type="Combination" name = "Combo" class="form-control" id="Combo" placeholder="Combination">
+  </div>
+
+    
+    
+   <div class="form-group">
+
+
+    <label for="Number" class = "form-label">Locker Number</label>    
+    <input type="Number" name="Number" id="Number" class = "form-control" placeholder="Locker #">
+    </div>
+
+
+
+    
+
+ 
+</div>
+ 
+
+ <input type="submit" class = "control" onclick="this.value='Thank you!'; google.script.run.withSuccessHandler(formSubmitted) .writeForm(this.parentNode) ; return false;">
+ 
+<input type = "submit" class = "infoBtn" value = "Get info" onclick = "this.value = 'Got it!'; google.script.run.withSuccessHandler(formSubmitted) .readForm(this.parentNode); return false;">
+ 
+</form>
+ 
+ 
+ 
+<div id="output"></div><!-- where the confirmation message goes -->
+ 
+<script>
+   function formSubmitted(status) {
+        document.getElementById('genericForm').style.display = 'none'; //matches your form name or whatever you want to disappear post-submission
+        document.getElementById('output').innerHTML = status; //displays in item with the 'output' id
+    }
+</script>    
+ 
+<footer class ="bottom">
+  
+</footer>
+ 
+  </body>
+</html>
+
